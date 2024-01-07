@@ -1,0 +1,15 @@
+language: ruby
+addons:
+  chrome: stable
+services:
+  - postgresql
+before_install:
+  - gem install bundler
+before_script:
+  - npm install
+  - psql -c 'create database jamrails_test;' -U postgres
+cache: bundler
+script:
+  - bundle exec rake
+  - git fetch origin master:master
+  - bundle exec undercover --compare master

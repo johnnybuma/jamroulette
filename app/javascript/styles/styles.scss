@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+// Customizations
+@import "custom";
+
+@import '~bulma'; 
+
+body {
+  background: $white-ter;
+}
+#notifications {
+  cursor: pointer;
+}
+
+.notification-feed {
+  min-width: 15em;
+  padding-top: 15px;
+}
+
+.has-bottom-border {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar.is-black {
+  height: 100px;
+}
+
+#jamrails_logo img {
+  max-height: 75px!important;
+  height: 75px !important;
+  min-height: 75px !important;
+}

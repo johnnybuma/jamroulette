@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jam Rails</title>
+    <%= favicon_pack_tag 'media/images/favicon.ico' %>
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <script defer="true" src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+    
+    <%= stylesheet_pack_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
+    <%= javascript_pack_tag 'create_room_modal' %>
+    <%= javascript_pack_tag 'notification_feed' %>
+  </head>
+
+  <%= render "layouts/navbar" %>
+  <%= render "shared/create_room_modal" %>
+
+  <body>
+    <%= render "layouts/flash" %>
+    <%= yield %>
+  </body>
+</html>

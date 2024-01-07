@@ -1,0 +1,34 @@
+<section class="hero is-dark is-fullheight is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <section class="section">
+        <h1 class="title">
+          Jam Rails
+        </h1>
+        <h2 class="subtitle">
+          Download a track. Add something. Upload it back.
+        </h2>
+
+        <%= link_to(random_rooms_path, class: "button is-dark is-inverted") do %>
+          <span class="icon">
+            <i class="fas fa-door-open"></i>
+          </span>
+          <span>Visit a random room</span>
+        <% end %>
+
+        <button class="button is-dark is-inverted create-room-button">
+          <span class="icon">
+            <i class="fas fa-plus-circle"></i>
+          </span>
+          <span>Create a new room</span>
+        </button>
+      </section>
+
+      <% if @has_activities %>
+        <section class="section">
+          <%= render "shared/activity_feed", owner: @current_user %>
+        </section>
+      <% end %>
+    </div>
+  </div>
+</section>
